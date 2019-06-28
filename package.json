@@ -4,7 +4,9 @@
   "description": "Mortgage Rates Application",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development",
+    "dev": "webpack --mode development"
   },
   "repository": {
     "type": "git",
