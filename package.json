@@ -1,0 +1,26 @@
+{
+  "name": "mortgage-rates",
+  "version": "0.0.1",
+  "description": "Mortgage Rates Application",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatissantos/mortgage-rates.git"
+  },
+  "keywords": [
+    "mortgage",
+    "rates",
+    "vue.js",
+    "webpack",
+    "scss"
+  ],
+  "author": "Chatis Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chatissantos/mortgage-rates/issues"
+  },
+  "homepage": "https://github.com/chatissantos/mortgage-rates#readme"
+}
