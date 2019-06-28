@@ -25,7 +25,11 @@
     "url": "https://github.com/chatissantos/mortgage-rates/issues"
   },
   "homepage": "https://github.com/chatissantos/mortgage-rates#readme",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
