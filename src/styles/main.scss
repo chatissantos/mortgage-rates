@@ -112,8 +112,14 @@ html, body {
   }
 }
 
+.navbar-brand {
+  font-family: "Gilroy Bold";
+}
 .navbar-brand, .nav-link {
   color: #fff!important;
+  img {
+    width: 45px;
+  }
 }
 .pagination {
   padding-top: 50px;

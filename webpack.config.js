@@ -10,7 +10,6 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Mortgage Rathjkbes',
             template: './src/pages/news.html',
             filename: 'news.html',
             inject: true,
@@ -24,7 +23,6 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            title: 'Mortgage Rates',
             template: './src/index.html',
             inject: true,
             minify: {
@@ -53,6 +51,16 @@ module.exports = {
                     options: {
                         name: '[name].[ext]',
                         outputPath: 'fonts/'
+                    }
+                }]
+            },
+            {
+                test: /\.(png|svg|jpg|gif|jpeg)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images/'
                     }
                 }]
             }

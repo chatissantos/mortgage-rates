@@ -1,5 +1,6 @@
 import './styles/main.scss';
 import 'bootstrap';
+import Logo from './images/logo.png';
 
 console.log('Welcome to Mortgage Rates');
 function removeClass() {
