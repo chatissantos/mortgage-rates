@@ -10,6 +10,20 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'Mortgage Rathjkbes',
+            template: './src/pages/news.html',
+            filename: 'news.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: false
+            },
+            output: {
+                filename: 'news.html',
+                path: path.resolve(__dirname, 'dist')
+            }
+        }),
+        new HtmlWebpackPlugin({
             title: 'Mortgage Rates',
             template: './src/index.html',
             inject: true,

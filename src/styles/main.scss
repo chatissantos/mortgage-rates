@@ -23,6 +23,7 @@
 
 html, body {
   font-family: "Gilroy Regular";
+  background-color: #f7f7ff;
 }
 
 /* Header */
@@ -113,4 +114,8 @@ html, body {
 
 .navbar-brand, .nav-link {
   color: #fff!important;
+}
+.pagination {
+  padding-top: 50px;
+  padding-bottom: 75px;
 }
