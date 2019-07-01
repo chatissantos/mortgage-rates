@@ -1,5 +1,29 @@
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+@font-face {
+  font-family: "Gilroy Bold";
+  src: url("./fonts/5538959/e1b0d70c-ce3f-425e-9624-00edc593f331.eot");
+  src: url("./fonts/5538959/e667d70b-2326-4c62-8f38-200c31c3b08c.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy SemiBold";
+  src: url("./fonts/5538991/6d7ee529-80b0-4acd-9d51-50e7b07146ae.eot");
+  src: url("./fonts/5538991/960a0830-33df-46c5-87bc-24fb52edfa4e.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy Medium";
+  src: url("./fonts/5538985/4a16895d-e7ea-467f-b07c-b52fb7f6eda0.eot");
+  src: url("./fonts/5538985/fd4654af-3e2f-4601-bb81-d6b08f68d9f0.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy Regular";
+  src: url("./fonts/5538977/45ca65f8-6b0b-4b04-8a75-d813ea28c010.eot");
+  src: url("./fonts/5538977/bf190033-35ff-42cf-b90c-f5321a94a3df.woff") format("woff");
+}
+
+html, body {
+  font-family: "Gilroy Regular";
+}
 
 /* Header */
 .waves {
