@@ -24,7 +24,7 @@
 
 html, body {
   font-family: "Gilroy Regular";
-  background-color: #f7f7ff;
+  background-color: $page-background;
 }
 
 /* Header */
@@ -125,4 +125,87 @@ html, body {
 .pagination {
   padding-top: 50px;
   padding-bottom: 75px;
+}
+.sub-title {
+  max-width: 33%;
+}
+
+.dark-purple {
+  color: $dark-purple;
+}
+.magenta {
+  color: $magenta;
+}
+.indigo-blue {
+  color: $indigo-blue;
+}
+.white-background {
+  background-color: $white;
+}
+.list {
+  .line {
+    padding-top: 63px;
+    padding-bottom: 63px;
+    border-bottom: 2px solid $page-background;
+    .rectangle {
+      width: 183px;
+      height: 115px;
+      margin: auto;
+      background-color: $pale-lilac;
+    }
+  }
+}
+
+.cards {
+  margin-bottom: 100px;
+}
+
+.card-subtitle {
+  font-weight: 600;
+}
+.card-title {
+  font-weight: 600;
+}
+
+div.pagination {
+  .previous, .next {
+    background-color: $white;
+    color: $indigo-blue;
+    border: 1px solid $purple-border;
+    border-radius: 100px;
+    width: 190px;
+    height: 56px;
+    font-weight: 600;
+  }
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      a {
+        background-color: $white;
+        display: block;
+        border: 1px solid $purple-border;
+        border-radius: 100px;
+        width: 56px;
+        height: 56px;
+        text-align: center;
+        padding: 1rem .75rem;
+        line-height: 1.25em;
+        color: $indigo-blue!important;
+      }
+      a.selected {
+        background: transparent;
+        border: 0;
+      }
+    }
+    li.dots {
+      margin-left: -15px;
+      margin-right: 0;
+      a {
+        background: transparent;
+        border: 0;
+      }
+    }
+  }
 }
