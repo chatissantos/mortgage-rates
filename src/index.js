@@ -1,4 +1,5 @@
 import './styles/main.scss';
+import './styles/news.scss';
 import 'bootstrap';
 import Logo from './images/logo.png';
 import ArticlePreviewLg from './images/article-preview-lg.png';

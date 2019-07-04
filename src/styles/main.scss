@@ -127,15 +127,18 @@ a:hover {
     width: 45px;
   }
 }
-.pagination {
-  padding-top: 50px;
-  padding-bottom: 75px;
-}
-.title {
 
-}
-.sub-title {
-  //max-width: 33%;
+.Subhead {
+  width: 685px;
+  height: 120px;
+  padding-right: 148px;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: 0.24px;
+  margin-bottom: 50px;
 }
 /* Color classes */
 .dark-purple {
@@ -162,122 +165,9 @@ a:hover {
 .medium {
   font-family: "Gilroy Medium";
 }
-.articles {
-  .article {
-    padding-top: 63px;
-    padding-bottom: 63px;
-    border-bottom: 2px solid $page-background;
-  }
-}
-.article-preview {
-  img {
-    max-width: 100%;
-    height: 100%;
-    border-radius: 8px;
-  }
-}
-.article-preview.lg {
-  width: 100%;
-  height: 225px;
-}
-.article-preview.sm {
-  width: 183px;
-  height: 115px;
-}
-.cards {
-  margin-bottom: 100px;
-  .card {
-    background-color: transparent;
-    border: 0;
-    .card-body {
-      padding: 0;
-    }
-    .card-subtitle {
-      font-weight: 600;
-    }
-    .card-title {
-      font-weight: 600;
-    }
-    hr {
-      background-color: $magenta;
-    }
-    svg {
-      border-radius: 8px;
-    }
-  }
-}
 
-div.pagination {
-  .previous, .next {
-    background-color: $white;
-    color: $indigo-blue;
-    border: 1px solid $purple-border;
-    border-radius: 100px;
-    width: 190px;
-    height: 56px;
-    font-weight: 600;
-    display: inline-block;
-    padding: 1rem;
-    text-align: center;
-  }
-  ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: center;
-    li {
-      display: inline-block;
-      margin-right: 15px;
-      a {
-        background-color: $white;
-        display: block;
-        border: 1px solid $purple-border;
-        border-radius: 100px;
-        width: 56px;
-        height: 56px;
-        text-align: center;
-        padding: 1rem .75rem;
-        line-height: 1.25em;
-        color: $indigo-blue!important;
-      }
-      a.selected {
-        background: transparent;
-        border: 0;
-      }
-    }
-    li.dots {
-      margin-left: -15px;
-      margin-right: 0;
-      a {
-        background: transparent;
-        border: 0;
-      }
-    }
-  }
-}
-@media (max-width: 600px) {
-  .article-preview-container, .previous-container, .next-container {
-    display: none!important;
-  }
-  div.pagination {
-    ul {
-      list-style: none;
-      li {
-        display: inline-block;
-        margin-right: 5px;
-        a {
-          width: 40px;
-          height: 40px;
-          padding: .5rem;
-        }
-      }
-      li.dots {
-        margin-left: -5px;
-        margin-right: 0;
-        a {
-          background: transparent;
-          border: 0;
-        }
-      }
-    }
+@media (min-width: 1460px) {
+  .container {
+    max-width: 1400px;
   }
 }
