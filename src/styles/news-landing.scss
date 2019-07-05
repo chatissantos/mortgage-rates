@@ -1,0 +1,194 @@
+@import "variables";
+
+.News-landing-container {
+  padding-top: 41px;
+  .Page-title {
+    height: 24px;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    color: $dark-purple;
+    font-family: "Gilroy SemiBold";
+    margin-bottom: 16px;
+  }
+  .Subhead {
+    height: 128px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    color: $dark-purple;
+    font-family: "Gilroy SemiBold";
+    margin-bottom: 0;
+  }
+  .News-headlines {
+    .card {
+      background-color: transparent;
+      border: 0!important;
+      margin-bottom: 0;
+      .News-image {
+        height: 217px;
+        margin-bottom: 16.2px;
+        img {
+          max-width: 100%;
+          height: 100%;
+          border-radius: 4px;
+        }
+
+      }
+      .card-body {
+        padding: 0;
+        .Date {
+          height: 13.9px;
+          font-size: 12px;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.4;
+          letter-spacing: 1.08px;
+          color: $magenta;
+          font-family: "Gilroy SemiBold";
+          margin-bottom: 10.5px;
+        }
+        .News-title {
+          font-size: 20px;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.5;
+          letter-spacing: 0.8px;
+          color: $magenta;
+          font-family: "Gilroy SemiBold";
+          margin-bottom: 16.9px;
+        }
+        .Desc {
+          font-size: 16px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.5;
+          letter-spacing: 0.64px;
+          color: $dark-purple;
+          margin-bottom: 45px;
+        }
+      }
+
+      hr {
+        background-color: $magenta;
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+      svg {
+        border-radius: 8px;
+      }
+    }
+  }
+  .News-articles {
+    .News-article {
+      border-bottom: 1px solid $light-periwinkle;
+      padding-top: 54px;
+      .Date {
+        height: 13.9px;
+        font-size: 12px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: 1.08px;
+        color: $dark-purple;
+        font-family: "Gilroy SemiBold";
+        margin-bottom: 10.5px;
+      }
+      .News-title {
+        font-size: 20px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 0.8px;
+        color: $indigo-blue;
+        font-family: "Gilroy SemiBold";
+        margin-bottom: 16.9px;
+      }
+      .Desc {
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 0.64px;
+        color: $dark-purple;
+        margin-bottom: 36px;
+      }
+    }
+  }
+  .Pagination {
+    .row {
+      padding-top: 75.6px;
+      padding-bottom: 75.6px;
+      text-align: center;
+      .previous, .next {
+        background-color: $white;
+        color: $indigo-blue;
+        border: 1px solid $purple-border;
+        border-radius: 100px;
+        width: 190px;
+        height: 56px;
+        font-weight: 600;
+        display: inline-block;
+        padding: 1rem;
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
+        li {
+          display: inline-block;
+          margin-right: 5px;
+          a {
+            background-color: $white;
+            display: block;
+            border: 1px solid $purple-border;
+            border-radius: 100px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding: .5rem;
+            line-height: 1.25em;
+            color: $indigo-blue!important;
+          }
+          a.selected {
+            background: transparent;
+            border: 0;
+          }
+        }
+        li.dots {
+          margin-left: -5px;
+          margin-right: 0;
+          a {
+            background: transparent;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 576px) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }

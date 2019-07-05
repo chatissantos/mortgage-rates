@@ -1,9 +1,10 @@
 import './styles/main.scss';
 import './styles/news.scss';
+import './styles/news-landing.scss';
 import 'bootstrap';
-import Logo from './images/logo.png';
-import ArticlePreviewLg from './images/article-preview-lg.png';
-import ArticlePreviewSm from './images/article-preview-sm.png';
+import './images/logo.png';
+import './images/article-preview-lg.png';
+import './images/article-preview-sm.png';
 
 console.log('Welcome to Mortgage Rates');
 function removeClass() {
