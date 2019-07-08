@@ -32,7 +32,6 @@
       border: 0!important;
       margin-bottom: 0;
       .News-image {
-        height: 217px;
         margin-bottom: 16.2px;
         img {
           width: 100%;
@@ -93,7 +92,6 @@
       border-bottom: 1px solid $light-periwinkle;
       padding-top: 54px;
       .Date {
-        height: 13.9px;
         font-size: 12px;
         font-weight: 600;
         font-style: normal;
@@ -151,6 +149,7 @@
         border-radius: 100px;
         width: 190px;
         height: 56px;
+        font-size: 18px;
         font-weight: 600;
         display: inline-block;
         padding: 1rem;
@@ -166,10 +165,12 @@
           a {
             background-color: $white;
             display: block;
-            border: 1px solid $purple-border;
+            border: 2px solid $purple-border;
             border-radius: 100px;
             width: 40px;
             height: 40px;
+            font-size: 18px;
+            font-weight: 600;
             text-align: center;
             padding: .5rem;
             line-height: 1.25em;
@@ -197,201 +198,7 @@
 @media (min-width: 576px) { }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .News-landing-container {
-    padding-top: 33.62px;
-    .Page-title {
-      height: 41px;
-      font-size: 45px;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 0.45px;
-      color: $dark-purple;
-      font-family: "Gilroy SemiBold";
-      margin-bottom: 52.5px;
-    }
-    .Subhead {
-      padding-right: 121.36px;
-      width: 561.7px;
-      height: 98.4px;
-      font-size: 19.7px;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.3;
-      letter-spacing: 0.20px;
-      color: $dark-purple;
-      font-family: "Gilroy SemiBold";
-      margin-bottom: 41px;
-    }
-    .News-headlines {
-      .card {
-        background-color: transparent;
-        border: 0!important;
-        margin-bottom: 0;
-        .News-image {
-          height: 250px;
-          margin-bottom: 32px;
-          img {
-            max-width: 100%;
-            height: 100%;
-            border-radius: 8px;
-          }
-
-        }
-        hr {
-          background-color: $magenta;
-          margin-top: 0;
-          margin-bottom: 19.7px;
-        }
-        .card-body {
-          padding: 0;
-          .Date {
-            height: 28.4px;
-            font-size: 12.3px;
-            font-weight: 600;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: 1.85px;
-            color: $magenta;
-            font-family: "Gilroy SemiBold";
-            margin-bottom: 8.6px;
-          }
-          .News-title {
-            font-size: 19.7px;
-            font-weight: 600;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.31;
-            letter-spacing: 0.197px;
-            color: $magenta;
-            font-family: "Gilroy SemiBold";
-            margin-bottom: 13.9px;
-          }
-          .Desc {
-            font-size: 14.76px;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.23;
-            letter-spacing: 0.59px;
-            color: $dark-purple;
-            margin-bottom: 36.9px;
-          }
-        }
-
-        svg {
-          border-radius: 8px;
-        }
-      }
-    }
-    .News-articles {
-      .News-article {
-        border-bottom: 1px solid $light-periwinkle;
-        padding-top: 65.6px;
-        padding-bottom: 65.6px;
-        .Date {
-          font-size: 12.3px;
-          font-weight: 600;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: normal;
-          letter-spacing: 1.85px;
-          color: $indigo-blue;
-          font-family: "Gilroy SemiBold";
-          margin-bottom: 8.6px;
-        }
-        .News-title {
-          font-size: 19.7px;
-          font-weight: 600;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.31;
-          letter-spacing: 0.24px;
-          color: $indigo-blue;
-          font-family: "Gilroy SemiBold";
-          margin-bottom: 13.86px;
-        }
-        .Desc {
-          font-size: 14.76px;
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.23;
-          letter-spacing: 0.6px;
-          color: $dark-purple;
-          margin-bottom: 0;
-        }
-      }
-    }
-    .News-article:last-child {
-      border-bottom: 0;
-    }
-    .Pagination {
-      .row {
-        padding-top: 62px;
-        padding-bottom: 62px;
-        text-align: center;
-        .previous, .next {
-          background-color: $white;
-          color: $indigo-blue;
-          border: 1px solid $purple-border;
-          border-radius: 100px;
-          width: 190px;
-          height: 56px;
-          font-weight: 600;
-          display: inline-block;
-          padding: 1rem;
-          text-align: center;
-        }
-        ul {
-          list-style: none;
-          padding-left: 0;
-          text-align: center;
-          li {
-            display: inline-block;
-            margin-right: 5px;
-            a {
-              background-color: $white;
-              display: block;
-              border: 1px solid $purple-border;
-              border-radius: 100px;
-              width: 56px;
-              height: 56px;
-              text-align: center;
-              padding: 1rem;
-              line-height: 1.25em;
-              color: $indigo-blue!important;
-            }
-            a.selected {
-              background: transparent;
-              border: 0;
-            }
-          }
-          li.dots {
-            margin-left: -5px;
-            margin-right: 0;
-            a {
-              background: transparent;
-              border: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1460px) {
+@media (min-width: 768px) {
   .News-landing-container {
     padding-top: 41px;
     .Page-title {
@@ -426,10 +233,9 @@
         border: 0!important;
         margin-bottom: 0;
         .News-image {
-          height: 304px;
           margin-bottom: 39px;
           img {
-            max-width: 100%;
+            width: 100%;
             height: 100%;
             border-radius: 8px;
           }
@@ -532,7 +338,7 @@
         .previous, .next {
           background-color: $white;
           color: $indigo-blue;
-          border: 1px solid $purple-border;
+          border: 2px solid $purple-border;
           border-radius: 100px;
           width: 190px;
           height: 56px;
@@ -551,7 +357,7 @@
             a {
               background-color: $white;
               display: block;
-              border: 1px solid $purple-border;
+              border: 2px solid $purple-border;
               border-radius: 100px;
               width: 56px;
               height: 56px;
@@ -578,3 +384,10 @@
     }
   }
 }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
+
