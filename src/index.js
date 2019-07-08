@@ -1,6 +1,6 @@
 import './styles/main.scss';
-import './styles/news.scss';
 import './styles/news-landing.scss';
+import './styles/news-article.scss';
 import 'bootstrap';
 import './images/logo.png';
 import './images/article-preview-lg.png';

@@ -36,6 +36,19 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
+            template: './src/pages/news-article.html',
+            filename: 'news-article.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: false
+            },
+            output: {
+                filename: 'news-article.html',
+                path: path.resolve(__dirname, 'dist')
+            }
+        }),
+        new HtmlWebpackPlugin({
             template: './src/index.html',
             inject: true,
             minify: {
