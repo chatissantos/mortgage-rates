@@ -1,3 +1,6 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
 @import "variables";
 
 .back {
@@ -6,11 +9,127 @@
   background-color: transparent;
   padding: 0;
   margin-bottom: 7px;
+  i {
+    margin-right: 10px;
+  }
 }
 .news-article-container {
   max-width: 923px;
   margin: auto;
-  .page-title {
+}
+.details {
+
+}
+.details__date {
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: 1.08px;
+  color: $dark-purple;
+  font-family: "Gilroy SemiBold";
+  padding: 0.5rem 0;
+  margin-bottom: 18px;
+}
+.details__tag {
+  display: inline-block;
+  margin-bottom: 16px;
+  a {
+    background-color: $white;
+    color: $purpleish-blue;
+    border: 1.4px solid $purple-border;
+    border-radius: 100px;
+    height: 36px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.5rem 20px;
+    text-align: center;
+  }
+}
+.article {
+
+}
+.article__image {
+  margin-bottom: 24px;
+  img {
+    border-radius: 4px;
+  }
+}
+.article__content {
+  color: $dark-purple;
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    font-family: "Gilroy SemiBold";
+    margin-bottom: 16px;
+  }
+}
+.social {
+  height: 400px;
+  color: $dark-purple;
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 48px;
+}
+.social__icon {
+  background-color: $light-periwinkle;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+  padding: .25rem;
+  margin-right: 16px;
+  i {
+    color: $dark-purple;
+    border: 0;
+  }
+}
+.social__share {
+  display: inline-block;
+  margin-right: 19px;
+}
+@include media-breakpoint-up(sm) { }
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { }
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+
+  .back {
+    color: $purpleish-blue;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 7px;
+    i {
+      margin-right: 16px;
+    }
+  }
+  .news-article-container {
+    max-width: 923px;
+    margin: auto;
+  }
+  .details {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .details__date {
     font-size: 20px;
     font-weight: 600;
     font-style: normal;
@@ -19,64 +138,58 @@
     letter-spacing: 0.8px;
     color: $dark-purple;
     font-family: "Gilroy SemiBold";
-    margin-bottom: 8px;
-  }
-  .date {
-    font-size: 12px;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.4;
-    letter-spacing: 1.08px;
-    color: $dark-purple;
-    font-family: "Gilroy SemiBold";
     padding: 0.5rem 0;
     margin-bottom: 18px;
+    margin-right: 25px;
   }
-  .tag {
+  .details__tag {
     display: inline-block;
+    margin-bottom: 16px;
     a {
       background-color: $white;
       color: $purpleish-blue;
       border: 1.4px solid $purple-border;
       border-radius: 100px;
-      height: 36px;
-      font-size: 12px;
+      height: 56px;
+      font-size: 18px;
       font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: 0.72px;
       display: inline-block;
-      padding: 0.5rem 20px;
+      padding: 0.75rem 20px;
       text-align: center;
     }
-    margin-bottom: 16px;
   }
   .article {
-    .article-image {
-      margin-bottom: 24px;
-      img {
-        width: 100%;
-        border-radius: 4px;
-      }
+
+  }
+  .article__image {
+    margin-bottom: 24px;
+    img {
+      border-radius: 4px;
     }
-    .article-content {
-      color: $dark-purple;
-      p {
-        font-size: 16px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.5;
-        letter-spacing: 0.64px;
-      }
-      h5 {
-        font-size: 16px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.5;
-        letter-spacing: 0.64px;
-        font-family: "Gilroy SemiBold";
-        margin-bottom: 16px;
-      }
+  }
+  .article__content {
+    color: $dark-purple;
+    p {
+      font-size: 24px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: 0.64px;
+    }
+    h5 {
+      font-size: 24px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: 0.64px;
+      font-family: "Gilroy SemiBold";
+      margin-bottom: 16px;
     }
   }
   .social {
@@ -85,132 +198,27 @@
     font-size: 15px;
     font-weight: 600;
     padding-top: 48px;
-    .icon {
-      background-color: $light-periwinkle;
-      width: 32px;
-      height: 32px;
-      display: inline-block;
-      border-radius: 4px;
-      text-align: center;
-      padding: .25rem;
-      i {
-        color: $dark-purple;
-        border: 0;
-      }
+  }
+  .social__icon {
+    background-color: $light-periwinkle;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    padding: .25rem;
+    margin-right: 16px;
+    i {
+      color: $dark-purple;
+      border: 0;
     }
   }
-}
-
-
-@media (min-width: 576px) { }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .news-article-container {
-    max-width: 923px;
-    margin: auto;
-    .page-title {
-      font-size: 55px;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 0.55px;
-      color: $dark-purple;
-      font-family: "Gilroy SemiBold";
-      margin-bottom: 40px;
-    }
-    .date {
-      height: 40px;
-      font-size: 20px;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.5;
-      letter-spacing: 0.8px;
-      color: $dark-purple;
-      font-family: "Gilroy SemiBold";
-      padding: 1rem 0;
-      margin-bottom: 18px;
-    }
-    .tag {
-      display: inline-block;
-      a {
-        background-color: $white;
-        color: $purpleish-blue;
-        border: 1.4px solid $purple-border;
-        border-radius: 100px;
-        height: 56px;
-        font-size: 18px;
-        font-weight: 600;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.5;
-        letter-spacing: 0.72px;
-        display: inline-block;
-        padding: 0.75rem 20px;
-        text-align: center;
-      }
-      margin-bottom: 16px;
-      margin-right: 18px;
-    }
-    .article {
-      .article-image {
-        margin-bottom: 24px;
-        img {
-          width: 100%;
-          border-radius: 4px;
-        }
-      }
-      .article-content {
-        color: $dark-purple;
-        p {
-          font-size: 24px;
-          font-weight: normal;
-          line-height: 1.6;
-          letter-spacing: 0.24px;
-          font-family: "Gilroy Regular";
-        }
-        h5 {
-          font-size: 24px;
-          font-weight: 600;
-          line-height: 1.6;
-          letter-spacing: 0.24px;
-          font-family: "Gilroy SemiBold";
-          margin-bottom: 16px;
-        }
-      }
-    }
-    .social {
-      height: 400px;
-      color: $dark-purple;
-      font-size: 15px;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 2.25px;
-      padding-top: 48px;
-      .icon {
-        background-color: $light-periwinkle;
-        width: 40px;
-        height: 40px;
-        display: inline-block;
-        border-radius: 4px;
-        text-align: center;
-        padding: .5rem;
-        i {
-          color: $dark-purple;
-          border: 0;
-        }
-      }
-    }
+  .social__share {
+    display: inline-block;
+    margin-right: 38px;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
+@include media-breakpoint-up(xl) {  }
 

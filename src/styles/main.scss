@@ -1,4 +1,7 @@
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
 @import "variables";
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
@@ -53,26 +56,26 @@ a:hover {
     bottom: 0;
 
     svg {
-      // width: 110vw;
-      // margin-left: -50px;
-      // margin-right: -50px;
+      width: 130vw;
+      margin-left: -50px;
+      margin-right: -50px;
     }
   }
 
   &__white {
-    // animation: wavy_flex_white 3s 1500ms ease-in-out alternate infinite;
-    // width: 100%;
-    // margin-bottom: -15px;
+    animation: wavy_flex_white 3s 1500ms ease-in-out alternate infinite;
+    width: 100%;
+    margin-bottom: -15px;
     z-index: 2;
 
     .more & {
-      // animation: wavy_flex_white--more 2s ease-in-out alternate infinite;
+      animation: wavy_flex_white--more 2s ease-in-out alternate infinite;
     }
   }
 
   &__purple {
-    // animation: wavy_flex 5s ease-in-out alternate infinite;
-    // margin-bottom: -2vw;
+    animation: wavy_flex 5s ease-in-out alternate infinite;
+    margin-bottom: -2vw;
     z-index: 1;
 
     .more & {
@@ -80,8 +83,6 @@ a:hover {
     }
   }
 }
-
-
 @keyframes wavy_flex {
   from {
     transform: slewX(50deg) slewY(5deg);
@@ -91,7 +92,6 @@ a:hover {
     transform: skewX(60deg) skewY(-3deg);
   }
 }
-
 @keyframes wavy_flex--more {
   from {
     transform: slewX(0deg) slewY(-3deg);
@@ -101,8 +101,6 @@ a:hover {
     transform: skewX(50deg) skewY(5deg);
   }
 }
-
-
 @keyframes wavy_flex_white {
   from {
     transform: slewX(0deg) slewY(0deg);
@@ -112,7 +110,6 @@ a:hover {
     transform: skewX(-30deg) skewY(0deg) translateY(-10px);
   }
 }
-
 @keyframes wavy_flex_white--more {
   from {
     transform: slewX(-60deg) slewY(0deg) rotate(3deg);
@@ -186,7 +183,41 @@ a:hover {
     width: 30px;
   }
 }
-@media (min-width: 576px) {
+
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  color: $dark-purple;
+  font-family: "Gilroy SemiBold";
+  margin-bottom: 0;
+}
+.page-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  color: $dark-purple;
+  font-family: "Gilroy SemiBold";
+  margin-top: 16px;
+  margin-bottom: 60px;
+}
+
+
+@include media-breakpoint-up(sm) { }
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { }
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+
   /* Header */
   .waves {
     $root: &;
@@ -230,8 +261,6 @@ a:hover {
       }
     }
   }
-
-
   @keyframes wavy_flex {
     from {
       transform: slewX(50deg) slewY(5deg);
@@ -241,7 +270,6 @@ a:hover {
       transform: skewX(60deg) skewY(-3deg);
     }
   }
-
   @keyframes wavy_flex--more {
     from {
       transform: slewX(0deg) slewY(-3deg);
@@ -251,8 +279,6 @@ a:hover {
       transform: skewX(50deg) skewY(5deg);
     }
   }
-
-
   @keyframes wavy_flex_white {
     from {
       transform: slewX(0deg) slewY(0deg);
@@ -262,7 +288,6 @@ a:hover {
       transform: skewX(-30deg) skewY(0deg) translateY(-10px);
     }
   }
-
   @keyframes wavy_flex_white--more {
     from {
       transform: slewX(-60deg) slewY(0deg) rotate(3deg);
@@ -272,21 +297,30 @@ a:hover {
       transform: skewX(-30deg) skewY(0deg) rotate(0deg);
     }
   }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-
-}
-
-@media (min-width: 1460px) {
-  .container {
-    max-width: 1400px;
+  .page-title {
+    font-size: 55px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.55px;
+    color: $dark-purple;
+    font-family: "Gilroy SemiBold";
+    margin-bottom: 0;
+  }
+  .page-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    color: $dark-purple;
+    font-family: "Gilroy SemiBold";
+    margin-top: 16px;
+    margin-bottom: 50px;
   }
 }
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {  }
