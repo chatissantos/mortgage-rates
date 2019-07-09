@@ -7,10 +7,10 @@
   padding: 0;
   margin-bottom: 7px;
 }
-.News-article-container {
+.news-article-container {
   max-width: 923px;
   margin: auto;
-  .Page-title {
+  .page-title {
     font-size: 20px;
     font-weight: 600;
     font-style: normal;
@@ -21,7 +21,7 @@
     font-family: "Gilroy SemiBold";
     margin-bottom: 8px;
   }
-  .Date {
+  .date {
     font-size: 12px;
     font-weight: 600;
     font-style: normal;
@@ -109,10 +109,10 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .News-article-container {
+  .news-article-container {
     max-width: 923px;
     margin: auto;
-    .Page-title {
+    .page-title {
       font-size: 55px;
       font-weight: 600;
       font-style: normal;
@@ -123,7 +123,7 @@
       font-family: "Gilroy SemiBold";
       margin-bottom: 40px;
     }
-    .Date {
+    .date {
       height: 40px;
       font-size: 20px;
       font-weight: 600;

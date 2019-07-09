@@ -1,6 +1,6 @@
 @import "variables";
 
-.News-landing-container {
+.news-landing-container {
   padding-top: 41px;
   .Page-title {
     height: 24px;
@@ -26,12 +26,12 @@
     font-family: "Gilroy SemiBold";
     margin-bottom: 0;
   }
-  .News-headlines {
+  .news-headlines {
     .card {
       background-color: transparent;
       border: 0!important;
       margin-bottom: 0;
-      .News-image {
+      .news-image {
         margin-bottom: 16.2px;
         img {
           width: 100%;
@@ -42,7 +42,7 @@
       }
       .card-body {
         padding: 0;
-        .Date {
+        .date {
           height: 13.9px;
           font-size: 12px;
           font-weight: 600;
@@ -54,7 +54,7 @@
           font-family: "Gilroy SemiBold";
           margin-bottom: 10.5px;
         }
-        .News-title {
+        .news-title {
           font-size: 20px;
           font-weight: 600;
           font-style: normal;
@@ -65,7 +65,7 @@
           font-family: "Gilroy SemiBold";
           margin-bottom: 16.9px;
         }
-        .Desc {
+        .desc {
           font-size: 16px;
           font-weight: normal;
           font-style: normal;
@@ -87,11 +87,11 @@
       }
     }
   }
-  .News-articles {
-    .News-article {
+  .news-articles {
+    .news-article {
       border-bottom: 1px solid $light-periwinkle;
       padding-top: 54px;
-      .Date {
+      .date {
         font-size: 12px;
         font-weight: 600;
         font-style: normal;
@@ -113,7 +113,7 @@
         font-family: "Gilroy SemiBold";
         margin-bottom: 16.9px;
       }
-      .Desc {
+      .desc {
         font-size: 16px;
         font-weight: normal;
         font-style: normal;
@@ -123,8 +123,8 @@
         color: $dark-purple;
         margin-bottom: 36px;
       }
-      .Rectangle-container {
-        .Rectangle {
+      .rectangle-container {
+        .rectangle {
           width: 183px;
           height: 115px;
           border-radius: 8px;
@@ -251,7 +251,7 @@
         }
         .card-body {
           padding: 0;
-          .Date {
+          .date {
             height: 34.6px;
             font-size: 15px;
             font-weight: 600;
@@ -274,7 +274,7 @@
             font-family: "Gilroy SemiBold";
             margin-bottom: 16.9px;
           }
-          .Desc {
+          .desc {
             font-size: 18px;
             font-weight: normal;
             font-style: normal;
@@ -291,12 +291,12 @@
         }
       }
     }
-    .News-articles {
-      .News-article {
+    .news-articles {
+      .news-article {
         border-bottom: 1px solid $light-periwinkle;
         padding-top: 80px;
         padding-bottom: 80px;
-        .Date {
+        .date {
           font-size: 15px;
           font-weight: 600;
           font-style: normal;
@@ -318,7 +318,7 @@
           font-family: "Gilroy SemiBold";
           margin-bottom: 16.9px;
         }
-        .Desc {
+        .desc {
           font-size: 18px;
           font-weight: normal;
           font-style: normal;
@@ -330,7 +330,7 @@
         }
       }
     }
-    .News-article:last-child {
+    .news-article:last-child {
       border-bottom: 0;
     }
     .Pagination {
