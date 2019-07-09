@@ -14,7 +14,7 @@
     font-family: "Gilroy SemiBold";
     margin-bottom: 16px;
   }
-  .Subhead {
+  .subhead {
     height: 128px;
     font-size: 16px;
     font-weight: 600;
@@ -102,7 +102,7 @@
         font-family: "Gilroy SemiBold";
         margin-bottom: 10.5px;
       }
-      .News-title {
+      .newstitle {
         font-size: 20px;
         font-weight: 600;
         font-style: normal;
@@ -202,7 +202,7 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .News-landing-container {
+  .newslanding-container {
     padding-top: 41px;
     .Page-title {
       height: 50px;
@@ -216,7 +216,7 @@
       font-family: "Gilroy SemiBold";
       margin-bottom: 64px;
     }
-    .Subhead {
+    .subhead {
       padding-right: 148px;
       width: 685px;
       height: 120px;
@@ -230,12 +230,12 @@
       font-family: "Gilroy SemiBold";
       margin-bottom: 50px;
     }
-    .News-headlines {
+    .newsheadlines {
       .card {
         background-color: transparent;
         border: 0!important;
         margin-bottom: 0;
-        .News-image {
+        .newsimage {
           margin-bottom: 39px;
           img {
             width: 100%;
@@ -263,7 +263,7 @@
             font-family: "Gilroy SemiBold";
             margin-bottom: 10.5px;
           }
-          .News-title {
+          .newstitle {
             font-size: 24px;
             font-weight: 600;
             font-style: normal;
@@ -307,7 +307,7 @@
           font-family: "Gilroy SemiBold";
           margin-bottom: 10.5px;
         }
-        .News-title {
+        .newstitle {
           font-size: 24px;
           font-weight: 600;
           font-style: normal;
