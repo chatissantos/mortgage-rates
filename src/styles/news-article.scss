@@ -177,7 +177,7 @@
   }
   .article__content {
     color: $dark-purple;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -187,6 +187,7 @@
 
     }
     h5 {
+      font-size: 24px;
       font-weight: 600;
       font-family: "Gilroy SemiBold";
       margin-bottom: 16px;

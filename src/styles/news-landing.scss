@@ -194,6 +194,7 @@
     margin-bottom: 23.1px;
   }
   .news-headline__title {
+    height: 115px;
     font-size: 24px;
     font-weight: 600;
     font-style: normal;
@@ -202,7 +203,7 @@
     letter-spacing: 0.24px;
     color: $magenta;
     font-family: "Gilroy SemiBold";
-    margin-bottom: 34.6px;
+    margin-bottom: 0;
   }
   .news-headline__description {
     font-size: 18px;
