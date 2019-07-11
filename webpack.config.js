@@ -10,15 +10,15 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/pages/news.html',
-            filename: 'news.html',
+            template: './src/pages/rates.html',
+            filename: 'rates.html',
             inject: true,
             minify: {
                 removeComments: true,
                 collapseWhitespace: false
             },
             output: {
-                filename: 'news.html',
+                filename: 'rates.html',
                 path: path.resolve(__dirname, 'dist')
             }
         }),

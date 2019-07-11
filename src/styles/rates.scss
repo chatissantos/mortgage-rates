@@ -1,0 +1,145 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
+@import "variables";
+$table-column-width: 64px;
+
+.rates-filters {
+  background-color: $purpleish-blue;
+  color: $white;
+  height: 56px;
+  padding-top: 1rem;
+}
+.rates-table-container {
+  max-width: 100%;
+  overflow: auto;
+}
+.rates-table {
+  overflow: auto;
+  white-space: nowrap;
+  position: relative;
+  max-height: 600px;
+}
+.rates-table__headers {
+  background-color: $table-head-bg;
+  position: sticky; top: 0;
+  width: 786px;
+  padding: 8px 30px 8px 30px;
+}
+.rates-table__headers__header {
+  display: inline-block;
+  width: 79px;
+  height: 24px;
+  color: $white;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.17px;
+}
+.rates-table__rows {
+  background-color: $purple-border;
+  width: 786px;
+  padding-top: 22px;
+}
+.rates-table__rows__row {
+  border-radius: 4px;
+  background-color: $white;
+  margin-bottom: 8px;
+  -webkit-box-shadow: 2px 7px 39px -1px rgba(229, 225, 229, 0.58);
+  -moz-box-shadow: 2px 7px 39px -1px rgba(229, 225, 229, 0.58);
+  box-shadow: 2px 7px 39px -1px rgba(229, 225, 229, 0.58);
+  padding: 8px 15px 8px 15px;
+}
+.rates-table__rows__row__column {
+  display: inline-block;
+  width: 79px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  color: $dark-purple;
+  border-right: 1px solid $purple-border;
+  text-align: center;
+}
+.rates-table__rows__row__column:last-child {
+  border-right: 0;
+}
+.rates-table__rows__row__title {
+  color: $purpleish-blue;
+  height: 17px;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: 1.08px;
+  margin-bottom: 14px;
+}
+
+.info-card {
+  padding-bottom: 48px;
+}
+.info-card--light-background{
+  background-color: $white;
+}
+.info-card__title {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: 0.24px;
+  color: $dark-purple;
+}
+.info-card__item {
+  padding-top: 1.25rem;
+}
+.info-card__item__header {
+  height: 64px;
+  border-bottom: 1px solid $purple-border;
+}
+.info-card__item__title {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.56px;
+  color: $indigo-blue;
+  margin-bottom: 0;
+}
+.info-card__item__button {
+  color: $indigo-blue;
+}
+.info-card__item__content {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  color: $dark-purple;
+  border-bottom: 1px solid $purple-border;
+}
+.lenders {
+
+}
+.lenders__lender {
+
+}
+.lenders__lender__image {
+
+}
+.lenders__lender__title {
+
+}
+.lenders__lender__description {
+
+}
+
