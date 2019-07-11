@@ -69,10 +69,20 @@
   p {
 
   }
-  h5 {
+  thead {
+    background-color: $dark-purple;
+    color: $white;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: $white;
+  }
+  h1, h2, h3, h4, h5 {
+    margin: 36px 0 28px 0;
     font-weight: 600;
     font-family: "Gilroy SemiBold";
-    margin-bottom: 16px;
+  }
+  th {
+    border-bottom-width: 1px!important;
   }
 }
 .article__content__table {
@@ -92,10 +102,11 @@
   background-color: $light-periwinkle;
   width: 32px;
   height: 32px;
+  font-size: 10px;
   display: inline-block;
   border-radius: 4px;
   text-align: center;
-  padding: .25rem;
+  padding: .5rem;
   margin-right: 16px;
   i {
     color: $dark-purple;
@@ -104,6 +115,12 @@
 }
 .social__share {
   display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2.25px;
   margin-right: 19px;
 }
 @include media-breakpoint-up(sm) { }
@@ -152,7 +169,7 @@
     a {
       background-color: $white;
       color: $purpleish-blue;
-      border: 1.4px solid $purple-border;
+      border: 0;
       border-radius: 100px;
       height: 56px;
       font-size: 18px;
@@ -202,12 +219,13 @@
   }
   .social__icon {
     background-color: $light-periwinkle;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
     display: inline-block;
     border-radius: 4px;
     text-align: center;
-    padding: .25rem;
+    padding: .75rem;
     margin-right: 16px;
     i {
       color: $dark-purple;
@@ -216,6 +234,12 @@
   }
   .social__share {
     display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.25px;
     margin-right: 38px;
   }
 }
