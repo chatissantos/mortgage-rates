@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mortgage Rates | Rates</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
     <!-- Header -->
+
     <div class="waves more d-block d-lg-none mobile-header">
 
         <div class="container">
@@ -131,173 +133,681 @@
 
     </div>
 
+
     <div class="container">
         <h1 class="page-title">News</h1>
         <p class="page-subtitle">
             All the latest mortgage rates in one place.
         </p>
     </div>
-    <div class="rates-filters">
-        <div class="container">
-            <div class="row">
-                <div class="col-10">
-                    Filter Rates
+    <div class="d-block d-lg-none">
+        <div class="rates-filters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10">
+                        Filter Rates
+                    </div>
+                    <div class="col-2 text-right">
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
                 </div>
-                <div class="col-2 text-right">
-                    <i class="fa fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="rates-table">
+            <div class="rates-table__headers">
+                <div class="rates-table__headers__header">Floating</div>
+                <div class="rates-table__headers__header">6 Months</div>
+                <div class="rates-table__headers__header">1 Year</div>
+                <div class="rates-table__headers__header">18 Months</div>
+                <div class="rates-table__headers__header">2 Years</div>
+                <div class="rates-table__headers__header">3 Years</div>
+                <div class="rates-table__headers__header">4 Years</div>
+                <div class="rates-table__headers__header">5 Years</div>
+                <div class="rates-table__headers__header">6 Years</div>
+            </div>
+            <div class="rates-table__rows">
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                </div>
+                <div class="rates-table__rows__row rates-table__rows__row--mobile">
+                    <div class="rates-table__rows__row__title">ANZ Special</div>
+                    <div class="rates-table__rows__row__cell">4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
+                    <div class="rates-table__rows__row__cell"> 4.05%</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="rates-table">
-        <div class="container rates-table__headers">
-            <div class="rates-table__headers__header">Floating</div>
-            <div class="rates-table__headers__header">6 Months</div>
-            <div class="rates-table__headers__header">1 Year</div>
-            <div class="rates-table__headers__header">18 Months</div>
-            <div class="rates-table__headers__header">2 Years</div>
-            <div class="rates-table__headers__header">3 Years</div>
-            <div class="rates-table__headers__header">4 Years</div>
-            <div class="rates-table__headers__header">5 Years</div>
-            <div class="rates-table__headers__header">6 Years</div>
-        </div>
-        <div class="container rates-table__rows">
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ASB Bank</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ASB Bank Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
-            <div class="rates-table__rows__row">
-                <div class="rates-table__rows__row__title">ANZ Special</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-                <div class="rates-table__rows__row__column"> 4.05%</div>
-            </div>
+    <div class="d-none d-lg-block container">
+        <div class="rates-filters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        Filter Rates
+                    </div>
+                    <div class="col-10">
+                        <div class="row rates-filters__filter-list">
+                            <div class="col rates-filters__filter">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="rates-filters__filter__text">
+                                            Show
+                                        </p>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="dropdown rates-filters__filter__dropdown">
+                                            <div class="rates-filters__filter__dropdown__button" data-toggle="dropdown">
+                                                <span>All Lenders</span>
+                                                <i class="fa fa-chevron-down"></i>
+                                            </div>
 
+                                            <div class="dropdown-menu" aria-labelledby="rates-filters__filter__dropdown">
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>Top 5 Banks</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>Kiwi Owned Banks</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>Non Bank Lenders</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>Low Deposit Option</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col rates-filters__filter">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="rates-filters__filter__text">
+                                            Show
+                                        </p>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="dropdown rates-filters__filter__dropdown">
+                                            <div class="rates-filters__filter__dropdown__button" data-toggle="dropdown">
+                                                <span>All Terms</span>
+                                                <i class="fa fa-chevron-down"></i>
+                                            </div>
+
+                                            <div class="dropdown-menu" aria-labelledby="rates-filters__filter__dropdown">
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>Floating</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>6 Months</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>1 Year</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>18 Months</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>2 Years</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>3 Years</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>4 Years</span>
+                                                </div>
+                                                <div class="dropdown-menu__item">
+                                                    <i class="far fa-square"></i>
+                                                    <i class="far fa-check-square"></i>
+                                                    <span>5 Years</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col rates-filters__filter">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="rates-filters__filter__text">
+                                            Show
+                                        </p>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="dropdown rates-filters__filter__dropdown">
+                                            <div class="rates-filters__filter__dropdown__button" data-toggle="dropdown">
+                                                <span>Lenders A-Z</span>
+                                                <i class="fa fa-chevron-down"></i>
+                                            </div>
+
+                                            <div class="dropdown-menu" aria-labelledby="rates-filters__filter__dropdown">
+                                                <a class="dropdown-item" href="#">Lenders A-Z</a>
+                                                <a class="dropdown-item" href="#">Lenders Z-A</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rates-table">
+            <div class="rates-table__headers">
+                <div class="rates-table__headers__left-header">
+                    <span>Lender</span>
+                </div>
+                <div class="rates-table__headers__header">
+                    <span>Floating</span>
+                </div>
+                <div class="rates-table__headers__header">
+                    <span>6 Months</span>
+                </div>
+                <div class="rates-table__headers__header">
+                    <span>1 Year</span>
+                </div>
+                <div class="rates-table__headers__header">
+                    <span>18 Months</span>
+                </div>
+                <div class="rates-table__headers__header">
+                    <span>2 Years</span>
+                </div>
+                <div class="rates-table__headers__header">
+                    <span>3 Years</span>
+                </div>
+                <div class="rates-table__headers__header">
+                    <span>4 Years</span>
+                </div>
+                <div class="rates-table__headers__header">
+                    <span>5 Years</span>
+                </div>
+            </div>
+            <div class="rates-table__rows">
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>ANZ</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>ANZ Special</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>ASB Bank</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>ASB Bank Special</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>BNZ - Classic</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>BNZ - Mortgage One</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>BNZ - Rapid Repay</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>BNZ - Std, Flybuys</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>BNZ - TotalMoney</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>Credit Union Auckland</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>Credit Union North</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+                <div class="rates-table__rows__row">
+                    <div class="rates-table__rows__row__left-header">
+                        <span>Heretaunga Building Society</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                    <div class="rates-table__rows__row__cell">
+                        <span>4.05%</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
     <div class="info-card info-card--light-background">
         <div class="container">
             <h1 class="info-card__title">Popular Mortgage Rate Terms</h1>
@@ -306,10 +816,8 @@
                     <div class="col-10">
                         <h5 class="info-card__item__title">One-year Term</h5>
                     </div>
-                    <div class="col-2">
-                        <button class="info-card__item__button" type="button" data-toggle="collapse" data-target="#info1" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-plus"></i>
-                        </button>
+                    <div class="col-2 info-card__item__button">
+                        <i class="fa fa-plus" data-target="#info1" data-toggle="collapse"></i>
                     </div>
                 </div>
                 <div class="info-card__item__content collapse" id="info1">
@@ -323,10 +831,8 @@
                     <div class="col-10">
                         <h5 class="info-card__item__title">One-year Term</h5>
                     </div>
-                    <div class="col-2">
-                        <button class="info-card__item__button" type="button" data-toggle="collapse" data-target="#info2" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-plus"></i>
-                        </button>
+                    <div class="col-2 info-card__item__button">
+                        <i class="fa fa-plus" data-toggle="collapse" data-target="#info2"></i>
                     </div>
                 </div>
                 <div class="info-card__item__content collapse" id="info2">
@@ -340,10 +846,8 @@
                     <div class="col-10">
                         <h5 class="info-card__item__title">One-year Term</h5>
                     </div>
-                    <div class="col-2">
-                        <button class="info-card__item__button" type="button" data-toggle="collapse" data-target="#info3" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-plus"></i>
-                        </button>
+                    <div class="col-2 info-card__item__button">
+                        <i class="fa fa-plus" data-toggle="collapse" data-target="#info3"></i>
                     </div>
                 </div>
                 <div class="info-card__item__content collapse" id="info3">
@@ -362,10 +866,8 @@
                     <div class="col-10">
                         <h5 class="info-card__item__title">One-year Term</h5>
                     </div>
-                    <div class="col-2">
-                        <button class="info-card__item__button" type="button" data-toggle="collapse" data-target="#info4" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-plus"></i>
-                        </button>
+                    <div class="col-2 info-card__item__button">
+                        <i class="fa fa-plus" data-toggle="collapse" data-target="#info4"></i>
                     </div>
                 </div>
                 <div class="info-card__item__content collapse" id="info4">
@@ -379,10 +881,8 @@
                     <div class="col-10">
                         <h5 class="info-card__item__title">One-year Term</h5>
                     </div>
-                    <div class="col-2">
-                        <button class="info-card__item__button" type="button" data-toggle="collapse" data-target="#info5" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-plus"></i>
-                        </button>
+                    <div class="col-2 info-card__item__button">
+                        <i class="fa fa-plus" data-toggle="collapse" data-target="#info5"></i>
                     </div>
                 </div>
                 <div class="info-card__item__content collapse" id="info5">
@@ -396,10 +896,8 @@
                     <div class="col-10">
                         <h5 class="info-card__item__title">One-year Term</h5>
                     </div>
-                    <div class="col-2">
-                        <button class="info-card__item__button" type="button" data-toggle="collapse" data-target="#info6" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-plus"></i>
-                        </button>
+                    <div class="col-2 info-card__item__button">
+                        <i class="fa fa-plus" data-toggle="collapse" data-target="#info6"></i>
                     </div>
                 </div>
                 <div class="info-card__item__content collapse" id="info6">
@@ -412,6 +910,140 @@
     </div>
 
 
-    <div></div>
+    <div class="container" id="lendersVue">
+        <div class="row">
+            <div class="col-8">
+                <h1 class="lenders__title">Types of Lenders</h1>
+            </div>
+            <div class="col-4 d-none lenders__mobile-buttons">
+                <i class="fas fa-chevron-left" v-if="currentLender === 1"></i>
+                <i class="fas fa-chevron-circle-left" v-else v-on:click="slide(-1)"></i>
+                <i class="fas fa-chevron-right" v-if="currentLender === lendersCount"></i>
+                <i class="fas fa-chevron-circle-right" v-else v-on:click="slide(1)"></i>
+            </div>
+        </div>
+        <div class="lenders" id="lenders">
+            <div class="d-block d-lg-none">
+                <div class="lenders__lender">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="lenders__lender__image">
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <h1 class="lenders__lender__title">Banks</h1>
+                        </div>
+                    </div>
+                    <p class="lenders__lender__description">
+                        Banks are regulated by the Reserve Bank. They're bound by lending restrictions applied by the New Zealand and Australian regulators such as LVR (loan-to-value) limits and other macro-prudential tools. The four major banks have 87 percent market share of mortgages.
+                    </p>
+                </div>
+                <div class="lenders__lender">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="lenders__lender__image">
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <h1 class="lenders__lender__title">Banks</h1>
+                        </div>
+                    </div>
+                    <p class="lenders__lender__description">
+                        Banks are regulated by the Reserve Bank. They're bound by lending restrictions applied by the New Zealand and Australian regulators such as LVR (loan-to-value) limits and other macro-prudential tools. The four major banks have 87 percent market share of mortgages.
+                    </p>
+                </div>
+                <div class="lenders__lender">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="lenders__lender__image">
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <h1 class="lenders__lender__title">Banks</h1>
+                        </div>
+                    </div>
+                    <p class="lenders__lender__description">
+                        Banks are regulated by the Reserve Bank. They're bound by lending restrictions applied by the New Zealand and Australian regulators such as LVR (loan-to-value) limits and other macro-prudential tools. The four major banks have 87 percent market share of mortgages.
+                    </p>
+                </div>
+            </div>
+            <div class="d-none d-lg-block">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="lenders__lender">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="lenders__lender__image">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h1 class="lenders__lender__title">Banks</h1>
+                                </div>
+                            </div>
+                            <p class="lenders__lender__description">
+                                Banks are regulated by the Reserve Bank. They're bound by lending restrictions applied by the New Zealand and Australian regulators such as LVR (loan-to-value) limits and other macro-prudential tools. The four major banks have 87 percent market share of mortgages.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="lenders__lender">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="lenders__lender__image">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h1 class="lenders__lender__title">Banks</h1>
+                                </div>
+                            </div>
+                            <p class="lenders__lender__description">
+                                Banks are regulated by the Reserve Bank. They're bound by lending restrictions applied by the New Zealand and Australian regulators such as LVR (loan-to-value) limits and other macro-prudential tools. The four major banks have 87 percent market share of mortgages.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="lenders__lender">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="lenders__lender__image">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h1 class="lenders__lender__title">Banks</h1>
+                                </div>
+                            </div>
+                            <p class="lenders__lender__description">
+                                Banks are regulated by the Reserve Bank. They're bound by lending restrictions applied by the New Zealand and Australian regulators such as LVR (loan-to-value) limits and other macro-prudential tools. The four major banks have 87 percent market share of mortgages.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var lendersApp = new Vue({
+            el: '#lendersVue',
+            data: {
+                currentLender: 1,
+                lendersCount: 3
+            },
+            methods: {
+                slide: function (move) {
+                    console.log('current lender: ', this.currentLender);
+                    this.currentLender = this.currentLender + move;
+                    const position = document.getElementsByClassName('lenders__lender')[this.currentLender - 1].offsetLeft;
+                    document.getElementById('lenders').scrollLeft = position;
+                    console.log('current lender: ', this.currentLender);
+                }
+            }
+        })
+    </script>
 </body>
 </html>
