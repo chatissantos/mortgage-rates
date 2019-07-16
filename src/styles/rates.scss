@@ -7,11 +7,24 @@ $table-column-width: 64px;
 .rates-filters {
   background-color: $purpleish-blue;
   color: $white;
-  height: 56px;
+  min-height: 56px;
   padding-top: 1rem;
+  padding-bottom: 1.5rem;
   .dropdown-menu__item {
     padding: .25rem 1.5rem;
   }
+}
+.rates-filters__filter {
+  padding: 0 15px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.rates-filters__filter__text {
+  margin-bottom: 0;
+}
+.rates-filters__filter__dropdown {
+  width: 100%;
+  border-radius: 8px;
 }
 
 .rates-table {
@@ -145,13 +158,28 @@ $table-column-width: 64px;
   margin-bottom: 16px;
 }
 .lenders__mobile-buttons {
-  color: $dark-purple;
+  color: $purpleish-blue;
+  text-align: right;
+}
+.lenders__mobile-buttons__button {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  padding-top: .3rem;
+  text-align: center;
+  background-color: $purpleish-blue;
+  color: white;
+}
+.lenders__mobile-buttons__button--disabled {
+  background-color: transparent;
+  color: $purpleish-blue;
 }
 .lenders {
   color: $dark-purple;
   white-space: nowrap;
   max-width: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
   padding-bottom: 300px;
 }
 .lenders__lender {
