@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mortgage Rates</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
     <!-- Header -->
-    <div class="waves more d-block d-lg-none mobile-header">
+    <div class="waves more d-block d-lg-none mobile-header waves--home">
 
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -55,11 +57,24 @@
                     </div>
                 </div>
             </nav>
+            <h1 class="big-title">Master Your Mortgage</h1>
+            <h4 class="big-subtitle">Compare the latest deals</h4>
+            <div class="row rate-of-the-day">
+                <div class="col-6">
+                    <p class="rate-of-the-day__title">RATE OF THE DAY</p>
+                    <p class="rate-of-the-day__description">2 YEAR FIXED</p>
+                </div>
+                <div class="col-6">
+                    <div class="rate-of-the-day__rate">
+                        <span>3.99%</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="waves__purple">
             <svg viewBox="0 0 1800 221" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0C79.8224 66.9541 329.367 186.611 688.967 129.605C1138.47 58.3481 1198.29 44.7757 1468.19 115C1682.58 170.782 1799.17 122.747 1800 115.156V115C1800 115.05 1800 115.102 1800 115.156V221H0V0Z" fill="#f7f7ff"/>
+                <path d="M0 0C79.8224 66.9541 329.367 186.611 688.967 129.605C1138.47 58.3481 1198.29 44.7757 1468.19 115C1682.58 170.782 1799.17 122.747 1800 115.156V115C1800 115.05 1800 115.102 1800 115.156V221H0V0Z" fill="#ffffff"/>
                 <defs>
                     <linearGradient id="paint0_linear" x1="628.038" y1="4.85154e-07" x2="638.397" y2="485.491" gradientUnits="userSpaceOnUse">
                         <stop stop-color="#8534CC"/>
@@ -129,8 +144,310 @@
 
 
     </div>
-    <div class="container">
-        <h1>Welcome to Mortgage Rates</h1>
+    <div class="rates--home white-background" id="rates-table--home">
+        <div class="container white-background pb-1">
+            <h1 class="newstitle dark-purple semi-bold">Compare the rates</h1>
+            <div class="button-filters">
+                <div class="button-filters__filter" v-on:click="filterByLender('isTop5Bank')" v-bind:class="{'button-filters__filter--selected': currentLenderFilter === 'isTop5Bank' }">The Big 5</div>
+                <div class="button-filters__filter" v-on:click="filterByLender('isKiwiOwned')" v-bind:class="{'button-filters__filter--selected': currentLenderFilter === 'isKiwiOwned' }">Kiwi Owned</div>
+                <div class="button-filters__filter" v-on:click="filterByLender('isNonBank')" v-bind:class="{'button-filters__filter--selected': currentLenderFilter === 'isNonBank' }">Non-bank Options</div>
+                <div class="button-filters__filter" v-on:click="filterByLender('isLowDeposit')" v-bind:class="{'button-filters__filter--selected': currentLenderFilter === 'isLowDeposit' }">Low Deposit Options</div>
+            </div>
+            <p class="filter-description m-0">Five major banks write 94% of mortgages in New Zealand, which makes them  our 'big five'.</p>
+        </div>
+        <table class="table article__content__table">
+            <thead>
+            <tr>
+                <th>Lender</th>
+                <th class="rates-table__rows__row__cell--home">1 Year</th>
+                <th class="rates-table__rows__row__cell--home">2 Years</th>
+                <th class="rates-table__rows__row__cell--home">3 Years</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="rate in filteredRates">
+                <td class="rates-table__rows__row__cell--home">{{ rate.lender }}</td>
+                <td class="rates-table__rows__row__cell--home">{{ rate.terms._1y }}</td>
+                <td class="rates-table__rows__row__cell--home">{{ rate.terms._2y }}</td>
+                <td class="rates-table__rows__row__cell--home">{{ rate.terms._3y }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="view-all-rates">
+            <a class="view-all-rates__link" title="View all rates" href="./rates.html">View All Rates</a>
+        </div>
     </div>
+
+    <div class="container reasons" id="reasonsVue">
+        <div class="row">
+            <div class="col-8">
+                <h1 class="mobile-carousel__title">Reasons to review your mortgage</h1>
+            </div>
+            <div class="col-4 d-block d-lg-none mobile-carousel__buttons">
+                <div class="mobile-carousel__buttons__button mobile-carousel__buttons__button--disabled" v-if="currentLender === 1">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="mobile-carousel__buttons__button" v-else v-on:click="slide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="mobile-carousel__buttons__button mobile-carousel__buttons__button--disabled" v-if="currentLender === lendersCount">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="mobile-carousel__buttons__button" v-else v-on:click="slide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="d-block d-lg-none mobile-carousel__items">
+                <div class="mobile-carousel__items__item">
+                    <h1 class="reasons__reason__title">01.</h1>
+                    <p class="reasons__reason__description">
+                        These are some the lowest mortgage rates we’ve ever seen and they won’t last forever.
+                    </p>
+                </div>
+                <div class="mobile-carousel__items__item">
+                    <h1 class="reasons__reason__title">02.</h1>
+                    <p class="reasons__reason__description">
+                        These are some the lowest mortgage rates we’ve ever seen and they won’t last forever.
+                    </p>
+                </div>
+                <div class="mobile-carousel__items__item">
+                    <h1 class="reasons__reason__title">03.</h1>
+                    <p class="reasons__reason__description">
+                        These are some the lowest mortgage rates we’ve ever seen and they won’t last forever.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const rates = [
+            {
+                lender: 'ANZ',
+                isNonBank: false,
+                isTop5Bank: true,
+                isKiwiOwned: true,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 3.95,
+                    _1y: 3.05,
+                    _18m: 2.05,
+                    _2y: 1.05,
+                    _3y: 6.05,
+                    _4y: 2.05,
+                    _5y: 0.05
+                }
+            },
+            {
+                lender: 'ANZ Special',
+                isTop5Bank: true,
+                isKiwiOwned: false,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.235,
+                    _1y: 3.05,
+                    _18m: 6.05,
+                    _2y: 7.05,
+                    _3y: 5.05,
+                    _4y: 2.05,
+                    _5y: 1.05
+                }
+            },
+            {
+                lender: 'ASB Bank',
+                isTop5Bank: true,
+                isKiwiOwned: false,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'ASB Bank Special',
+                isTop5Bank: true,
+                isKiwiOwned: true,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'BNZ - Classic',
+                isTop5Bank: true,
+                isKiwiOwned: false,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'BNZ - Mortgage One',
+                isTop5Bank: false,
+                isKiwiOwned: false,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'BNZ - Rapid Repay',
+                isTop5Bank: false,
+                isKiwiOwned: true,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'BNZ - Std, Flybuys',
+                isTop5Bank: false,
+                isKiwiOwned: false,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'BNZ - TotalMoney',
+                isTop5Bank: false,
+                isKiwiOwned: false,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'Credit Union Auckland',
+                isTop5Bank: false,
+                isKiwiOwned: false,
+                isNonBank: false,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'Credit Union North',
+                isTop5Bank: false,
+                isKiwiOwned: false,
+                isNonBank: true,
+                isLowDeposit: false,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 4.05,
+                    _18m: 4.05,
+                    _2y: 4.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+            {
+                lender: 'Heretaunga Building Society',
+                isTop5Bank: false,
+                isKiwiOwned: false,
+                isNonBank: false,
+                isLowDeposit: true,
+                terms: {
+                    _floating: 4.05,
+                    _6m: 4.05,
+                    _1y: 3.05,
+                    _18m: 2.05,
+                    _2y: 1.05,
+                    _3y: 4.05,
+                    _4y: 4.05,
+                    _5y: 4.05
+                }
+            },
+        ];
+        const ratesTable = new Vue({
+            el: '#rates-table--home',
+            data: {
+                currentLenderFilter: 'isTop5Bank',
+                filteredRates: rates.filter(function (rate) {
+                    return rate.isTop5Bank;
+                })
+            },
+            methods: {
+                filterByLender: function(value) {
+                    this.filteredRates = rates.filter(function (rate) {
+                        return value === '' ? true : rate[value];
+                    });
+                    this.currentLenderFilter = value;
+                }
+            }
+        });
+
+    </script>
 </body>
 </html>

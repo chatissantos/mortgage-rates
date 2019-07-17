@@ -69,13 +69,6 @@
   p {
 
   }
-  thead {
-    background-color: $dark-purple;
-    color: $white;
-  }
-  tbody tr:nth-child(odd) {
-    background-color: $white;
-  }
   h1, h2, h3, h4, h5 {
     margin: 36px 0 28px 0;
     font-weight: 600;
@@ -87,8 +80,19 @@
 }
 .article__content__table {
   color: $dark-purple;
+  thead {
+    background-color: $indigo-blue;
+    color: $white;
+  }
+  tbody tr {
+    background-color: $table-cell-bg;
+  }
+  tbody tr:nth-child(even) {
+    background-color: $white;
+  }
+
   th, td {
-    border-color: $light-periwinkle!important;
+    border: 0;
   }
 }
 .social {

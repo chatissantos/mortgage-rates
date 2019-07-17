@@ -10,6 +10,19 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            template: './src/pages/lender.html',
+            filename: 'lender.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: false
+            },
+            output: {
+                filename: 'lender.html',
+                path: path.resolve(__dirname, 'dist')
+            }
+        }),
+        new HtmlWebpackPlugin({
             template: './src/pages/rates.html',
             filename: 'rates.html',
             inject: true,

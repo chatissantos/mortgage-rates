@@ -1,0 +1,168 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
+@import "variables";
+
+.big-title {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+  color: $white;
+  padding-top: 40px;
+}
+.big-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: 0.24px;
+  color: $purple02;
+  margin-bottom: 41px;
+}
+.rates--home {
+  padding-bottom: 32px;
+}
+.rate-of-the-day {
+
+}
+.rate-of-the-day__title {
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $white;
+}
+.rate-of-the-day__description {
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  color: $purple01;
+  text-transform: uppercase;
+}
+.rate-of-the-day__rate {
+  font-size: 45px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 3.91px;
+  background-color: $white;
+  border-radius: 8px;
+  color: $purple-blue;
+  text-align: center;
+}
+.button-filters {
+  margin-bottom: 11px;
+}
+.button-filters__filter {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: 1.08px;
+  padding: 11px 16px 11px 16px;
+  border: 2px solid $pale-lilac;
+  border-radius: 8px;
+  background-color: $white;
+  color: $indigo-blue;
+  margin-bottom: 10px;
+}
+.button-filters__filter--selected {
+  background-color: $purpleish-blue;
+  color: $white;
+}
+.filter-description {
+  color: $dark-purple;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
+.rates-table__rows__row__cell--home {
+  width: 72px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
+.view-all-rates {
+  background-color: $white;
+  color: $purple03;
+  width: 161px;
+  height: 40px;
+  border: solid 2px $purple-border;
+  border-radius: 40px;
+  text-align: center;
+  padding-top: .5rem;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin: 32px auto 0 auto;
+}
+.view-all-rates__link {
+  color: #633398!important;
+}
+
+.reasons {
+  background-color: $pale-lilac;
+}
+.reasons__reason {
+
+}
+.reasons__reason__title {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: 0.24px;
+  font-family: "Gilroy SemiBold";
+  margin-bottom: 24px;
+}
+.reasons__reason__description {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  color: $dark-purple;
+}
+.reasons__btn-lg {
+
+}
+
+@include media-breakpoint-up(sm) { }
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { }
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {  }
+

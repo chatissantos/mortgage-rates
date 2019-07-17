@@ -2,6 +2,8 @@ import './styles/main.scss';
 import './styles/news-landing.scss';
 import './styles/news-article.scss';
 import './styles/rates.scss';
+import './styles/home.scss';
+import './styles/lender.scss';
 import 'bootstrap';
 import './images/logo.png';
 import './images/article-preview-lg.png';

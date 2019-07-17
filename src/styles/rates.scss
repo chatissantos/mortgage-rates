@@ -30,10 +30,13 @@ $table-column-width: 64px;
 .rates-table {
   width: 100%;
   overflow-x: scroll;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
   max-height: 500px;
   position: relative;
   background-color: $purple-border;
 }
+.rates-table::-webkit-scrollbar { width: 0 !important }
 .rates-table__headers {
   float: left;
   white-space: nowrap;
@@ -43,6 +46,15 @@ $table-column-width: 64px;
   top: 0;
   z-index: 10;
   padding-left: 15px;
+}
+.rates-table--curved-border {
+  border-radius: 8px;
+  .rates-table__rows__row:last-child {
+    border-radius: 0 0 0 8px;
+    .rates-table__rows__row__left-header {
+      border-radius: 0 0 0 8px;
+    }
+  }
 }
 .rates-table__headers__header {
   width: 79px;
@@ -278,6 +290,7 @@ $table-column-width: 64px;
     max-height: 800px;
     position: relative;
     margin-bottom: 128px;
+    background-color: transparent;
   }
   .rates-table__headers {
     float: left;

@@ -1,0 +1,96 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
+@import "variables";
+
+.title-section--lender {
+  padding-bottom: 28px;
+  .title {
+    margin-top: 8px;
+  }
+  .page-subtitle {
+    margin-bottom: 8px;
+  }
+}
+.lender-url {
+  color: $purpleish-blue;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 28px;
+  i {
+    margin-right: 10px;
+  }
+}
+.section__title {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: 0.24px;
+  color: $dark-purple;
+  margin-top: 24px;
+}
+.lender-infos {
+  padding-bottom: 200px;
+  background-color: $pale-lilac;
+}
+@include media-breakpoint-up(sm) { }
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { }
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+  .bottom {
+    background-color: #c5c5f4;
+    padding-top: 227px;
+    padding-bottom: 227px;
+  }
+  .calculator-button-link {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+  }
+  .how-to-borrow {
+    border-radius: 8px;
+    padding: 60px 120px 60px 120px;
+    color: $white;
+    h1 {
+      font-size: 30px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.39;
+      letter-spacing: 0.3px
+    }
+  }
+  .mortgage-features__description {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.69;
+    letter-spacing: 1.08px;
+    color: $dark-purple;
+    width: 585px;
+    height: 76px;
+    margin-top: 32px;
+  }
+  .lender-infos {
+    padding-bottom: 200px;
+    background-color: transparent;
+  }
+  .empty-discount__icon {
+    font-size: 56px;
+    margin-bottom: 35px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {  }
+
