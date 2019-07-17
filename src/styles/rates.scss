@@ -27,94 +27,96 @@ $table-column-width: 64px;
   border-radius: 8px;
 }
 
-.rates-table {
-  width: 100%;
-  overflow-x: scroll;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-  max-height: 500px;
-  position: relative;
-  background-color: $purple-border;
-}
-.rates-table::-webkit-scrollbar { width: 0 !important }
-.rates-table__headers {
-  float: left;
-  white-space: nowrap;
-  background-color: $indigo-blue;
-  color: $white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding-left: 15px;
-}
-.rates-table--curved-border {
-  border-radius: 8px;
-  .rates-table__rows__row:last-child {
-    border-radius: 0 0 0 8px;
-    .rates-table__rows__row__left-header {
+.rates-table-mobile {
+  .rates-table {
+    width: 100%;
+    overflow-x: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    background-color: $purple-border;
+  }
+  .rates-table::-webkit-scrollbar { width: 0 !important }
+  .rates-table__headers {
+    float: left;
+    white-space: nowrap;
+    background-color: $indigo-blue;
+    color: $white;
+    z-index: 10;
+    padding-left: 15px;
+  }
+  .rates-table--curved-border {
+    border-radius: 8px;
+    .rates-table__rows__row:last-child {
       border-radius: 0 0 0 8px;
+      .rates-table__rows__row__left-header {
+        border-radius: 0 0 0 8px;
+      }
     }
   }
-}
-.rates-table__headers__header {
-  width: 79px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  text-align: center;
-  display: inline-block;
-  z-index: -1;
-}
-.rates-table__rows {
-  background-color: $white;
-  z-index: 1;
-  padding: 0 15px 24px 15px;
-}
-.rates-table__rows__row {
-  float: left;
-  white-space: nowrap;
-  background-color: $white;
-  color: $dark-purple;
-  -webkit-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
-  -moz-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
-  box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
-  margin-bottom: 8px;
-  border-radius: 4px;
-}
-.rates-table__rows__row--disabled {
-  color: $pale-lilac!important;
-}
-.text--disabled {
-  color: $pale-lilac!important;
-}
-.rates-table__rows__row--mobile {
-  -webkit-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
-  -moz-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
-  box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
-}
-.rates-table__rows__row:first-child {
-  margin-top: 20px;
-}
-.rates-table__rows__row__title {
-  padding-left: 15px;
-  padding-top: 9px;
-  color: $purpleish-blue;
-}
-.rates-table__rows__row__cell {
-  width: 79px;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  text-align: center;
-  display: inline-block;
-  border-right: 1px solid $purple-border;
-  font-size: 16px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.5;
-  letter-spacing: 0.64px;
-}
+  .rates-table__headers__header {
+    width: 79px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    display: inline-block;
+    z-index: -1;
+  }
+  .rates-table__rows {
+    max-height: 500px;
+    background-color: $white;
+    z-index: 1;
+    padding: 0 15px 24px 15px;
+    float: left;
+    background-color: $purple-border;
+    overflow-y: scroll;
+  }
+  .rates-table__rows__row {
+    float: left;
+    white-space: nowrap;
+    background-color: $white;
+    color: $dark-purple;
+    -webkit-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
+    -moz-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
+    box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+  .rates-table__rows__row--disabled {
+    color: $pale-lilac!important;
+  }
+  .text--disabled {
+    color: $pale-lilac!important;
+  }
+  .rates-table__rows__row--mobile {
+    -webkit-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
+    -moz-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
+    box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
+  }
+  .rates-table__rows__row:first-child {
+    margin-top: 20px;
+  }
+  .rates-table__rows__row__title {
+    padding-left: 15px;
+    padding-top: 9px;
+    color: $purpleish-blue;
+  }
+  .rates-table__rows__row__cell {
+    width: 79px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    display: inline-block;
+    border-right: 1px solid $purple-border;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+  }}
+
 .info-card {
   padding-bottom: 48px;
   padding-top: 40px;
