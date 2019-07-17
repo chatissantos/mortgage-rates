@@ -244,7 +244,9 @@
                 <div class="rates-table__rows">
 
                     <div class="rates-table__rows__row rates-table__rows__row--mobile" v-for="rate in filteredRates">
-                        <div class="rates-table__rows__row__title">{{ rate.lender }}</div>
+                        <div class="rates-table__rows__row__title">
+                            <a href="lender.html" title="Lender page"> {{ rate.lender }}</a>
+                        </div>
                         <div class="rates-table__rows__row__cell">{{ rate.terms._floating }}</div>
                         <div class="rates-table__rows__row__cell">{{ rate.terms._6m }}</div>
                         <div class="rates-table__rows__row__cell">{{ rate.terms._1y }}</div>
@@ -396,7 +398,7 @@
                 <div class="rates-table__rows">
                     <div class="rates-table__rows__row" v-for="rate in filteredRates">
                         <div class="rates-table__rows__row__left-header">
-                            <span>{{ rate.lender }}</span>
+                            <span><a href="lender.html" title="Lender page"> {{ rate.lender }}</a></span>
                         </div>
                         <div class="rates-table__rows__row__cell">
                             <span>{{ rate.terms._floating }}</span>
