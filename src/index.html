@@ -8,33 +8,80 @@
 </head>
 <body>
     <!-- Header -->
-    <div class="waves more d-block d-lg-none mobile-header waves--home">
+    <div class="header-container">
+        <div class="page-header mobile-header d-block d-lg-none">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                    <a class="navbar-brand" href="/" title="Mortgage Rates Home Page">
+                        <img src="./images/logo.png" alt="Mortgage Rates Logo"/>
+                    </a>
 
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-                <a class="navbar-brand" href="/" title="Mortgage Rates Home Page">
-                    <img src="./images/logo.png" alt="Mortgage Rates Logo"/>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <div class="top"></div>
-                    <div class="middle"></div>
-                    <div class="bottom"></div>
-                </button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </button>
 
-                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarTogglerDemo02">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6 logo">
-                                <a class="navbar-brand" href="/" title="Mortgage Rates Home Page">
-                                    <img src="./images/logo.png" alt="Mortgage Rates Logo"/>
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <div class="navbar-toggler" data-toggle="collapse" data-target="#navbarTogglerDemo02" >
-                                    <i class="fas fa-times"></i>
+                    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarTogglerDemo02">
+                        <div class="container position-relative">
+                            <div class="row collapse-buttons">
+                                <div class="col-6 logo">
+                                    <a class="navbar-brand" href="/" title="Mortgage Rates Home Page">
+                                        <img src="./images/logo.png" alt="Mortgage Rates Logo"/>
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <div class="navbar-toggler" data-toggle="collapse" data-target="#navbarTogglerDemo02" >
+                                        <i class="fas fa-times"></i>
+                                    </div>
                                 </div>
                             </div>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./rates.html" title="Rates">Rates</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./news-landing.html" title="News">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./calculator.html" title="Mortgage Calculator">Mortgage Calculators</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./faqs.html" title="FAQ's">FAQ's</a>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button" class="btn btn-outline-light">
+                                        <a href="#" title="Talk to an expert">Talk to an expert</a>
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
+                </nav>
+                <h1 class="big-title">Master Your Mortgage</h1>
+                <h4 class="big-subtitle">Compare the latest deals</h4>
+                <div class="row rate-of-the-day">
+                    <div class="col-6">
+                        <p class="rate-of-the-day__title">RATE OF THE DAY</p>
+                        <p class="rate-of-the-day__description">2 YEAR FIXED</p>
+                    </div>
+                    <div class="col-6">
+                        <div class="rate-of-the-day__rate">
+                            <span>3.99%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header d-none d-lg-block">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                    <a class="navbar-brand" href="/" title="Mortgage Rates Home Page">
+                        <img src="./images/logo.png" alt="Mortgage Rates Logo"/>
+                        MortgageRates.co.nz
+                    </a>
+
+                    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="./rates.html" title="Rates">Rates</a>
@@ -55,95 +102,26 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-            </nav>
-            <h1 class="big-title">Master Your Mortgage</h1>
-            <h4 class="big-subtitle">Compare the latest deals</h4>
-            <div class="row rate-of-the-day">
-                <div class="col-6">
-                    <p class="rate-of-the-day__title">RATE OF THE DAY</p>
-                    <p class="rate-of-the-day__description">2 YEAR FIXED</p>
-                </div>
-                <div class="col-6">
-                    <div class="rate-of-the-day__rate">
-                        <span>3.99%</span>
+                </nav>
+                <h1 class="big-title">Master Your Mortgage</h1>
+                <h4 class="big-subtitle">Compare the latest deals</h4>
+                <div class="row rate-of-the-day">
+                    <div class="col-6">
+                        <p class="rate-of-the-day__title">RATE OF THE DAY</p>
+                        <p class="rate-of-the-day__description">2 YEAR FIXED</p>
+                    </div>
+                    <div class="col-6">
+                        <div class="rate-of-the-day__rate">
+                            <span>3.99%</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="waves__purple">
-            <svg viewBox="0 0 1800 221" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0C79.8224 66.9541 329.367 186.611 688.967 129.605C1138.47 58.3481 1198.29 44.7757 1468.19 115C1682.58 170.782 1799.17 122.747 1800 115.156V115C1800 115.05 1800 115.102 1800 115.156V221H0V0Z" fill="#ffffff"/>
-                <defs>
-                    <linearGradient id="paint0_linear" x1="628.038" y1="4.85154e-07" x2="638.397" y2="485.491" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#8534CC"/>
-                        <stop offset="1" stop-color="#6E29AB" stop-opacity="0"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-
-
-        </div>
+        <img class="header-wave" src="./images/header-wave.jpg">
     </div>
-    <div class="waves more d-none d-lg-block">
-
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-                <a class="navbar-brand" href="/" title="Mortgage Rates Home Page">
-                    <img src="./images/logo.png" alt="Mortgage Rates Logo"/>
-                    MortgageRates.co.nz
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./rates.html" title="Rates">Rates</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./news-landing.html" title="News">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./calculator.html" title="Mortgage Calculator">Mortgage Calculators</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./faqs.html" title="FAQ's">FAQ's</a>
-                        </li>
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-outline-light">
-                                <a href="#" title="Talk to an expert">Talk to an expert</a>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="waves__white">
-            <svg viewBox="0 0 1800 149" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M527.389 49.8852C266.585 17.0924 67.1282 59.9395 0 85.4622V149H1800V0C1800 0 1676.88 107.505 1192.36 113.305C882.723 117.012 853.392 90.8761 527.389 49.8852Z" fill="#f7f7ff"/>
-            </svg>
 
 
-        </div>
-        <div class="waves__purple">
-            <svg viewBox="0 0 1800 221" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0C79.8224 66.9541 329.367 186.611 688.967 129.605C1138.47 58.3481 1198.29 44.7757 1468.19 115C1682.58 170.782 1799.17 122.747 1800 115.156V115C1800 115.05 1800 115.102 1800 115.156V221H0V0Z" fill="url(#paint0_linear)"/>
-                <defs>
-                    <linearGradient id="paint0_linear" x1="628.038" y1="4.85154e-07" x2="638.397" y2="485.491" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#8534CC"/>
-                        <stop offset="1" stop-color="#6E29AB" stop-opacity="0"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-
-
-        </div>
-
-
-    </div>
     <div class="rates--home white-background" id="rates-table--home">
         <div class="container white-background pb-1">
             <h1 class="newstitle dark-purple semi-bold">Compare the rates</h1>
@@ -222,6 +200,45 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <img class="footer-wave" src="./images/footer-wave.jpg">
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container">
+            <div class="container-fluid text-center text-md-left">
+                <div class="row">
+                    <div class="col-md-4 mt-md-0 mt-3">
+                        <a class="navbar-brand" href="/" title="Mortgage Rates Home Page">
+                            <img src="./images/logo.png" alt="Mortgage Rates Logo"/>
+                            MortgageRates.co.nz
+                        </a>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none pb-3">
+                    <div class="col-md-2 mb-md-0 mb-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="footer-link" href="./about.html" title="About Us">About Us</a>
+                            </li>
+                            <li>
+                                <a class="footer-link" href="https://www.facebook.com" title="Follow us on facebook">Facebook</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 mb-md-0 mb-3">
+                        <p class="disclaimer">Disclaimer: Every possible effort has been made to keep the information in the rates tables as accurate as possible, however, neither the publishers of Mortgage Rates nor anyone engaged to compile these tables accept any liability for inaccuracies or any loss suffered as a result. It is strongly advised that readers check loan details directly with the provider concerned.</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="terms-and-conditions">Terms & Conditions</span>
+                            </div>
+                            <div class="col">
+                                <span class="copy-right">Mortgagerates.co.nz © 2019 All rights reserved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         const rates = [

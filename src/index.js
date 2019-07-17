@@ -8,6 +8,8 @@ import 'bootstrap';
 import './images/logo.png';
 import './images/article-preview-lg.png';
 import './images/article-preview-sm.png';
+import './images/header-wave.jpg';
+import './images/footer-wave.jpg';
 
 function removeClass() {
     var el = document.querySelector(".waves");

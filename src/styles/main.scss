@@ -48,90 +48,18 @@ a:hover {
 .pale-lilac-background {
   background-color: $pale-lilac;
 }
-/* Header */
-.waves {
-  $root: &;
 
-  position: relative;
-  height: 117.8px;
-  overflow: hidden;
-  background: linear-gradient(0deg, #60359C 0%, #3245D8 127.8%);
-
-  &__white,
-  &__purple {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-
-    svg {
-      width: 130vw;
-      margin-left: -50px;
-      margin-right: -50px;
-    }
-  }
-
-  &__white {
-    animation: wavy_flex_white 3s 1500ms ease-in-out alternate infinite;
-    width: 100%;
-    margin-bottom: -15px;
-    z-index: 2;
-
-    .more & {
-      animation: wavy_flex_white--more 2s ease-in-out alternate infinite;
-    }
-  }
-
-  &__purple {
-    animation: wavy_flex 5s ease-in-out alternate infinite;
-    margin-bottom: -2vw;
-    z-index: 1;
-
-    .more & {
-      // animation: wavy_flex--more 3s 1500ms ease-in-out alternate infinite;
-    }
-  }
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-.waves--home {
-  height: 417px;
-}
-@keyframes wavy_flex {
-  from {
-    transform: slewX(50deg) slewY(5deg);
-  }
-
-  to {
-    transform: skewX(60deg) skewY(-3deg);
-  }
-}
-@keyframes wavy_flex--more {
-  from {
-    transform: slewX(0deg) slewY(-3deg);
-  }
-
-  to {
-    transform: skewX(50deg) skewY(5deg);
-  }
-}
-@keyframes wavy_flex_white {
-  from {
-    transform: slewX(0deg) slewY(0deg);
-  }
-
-  to {
-    transform: skewX(-30deg) skewY(0deg) translateY(-10px);
-  }
-}
-@keyframes wavy_flex_white--more {
-  from {
-    transform: slewX(-60deg) slewY(0deg) rotate(3deg);
-  }
-
-  to {
-    transform: skewX(-30deg) skewY(0deg) rotate(0deg);
-  }
+.page-header {
+  background-color: #4C3AB7!important;
+  background-image: linear-gradient(to top, #4C3AB7, $azul-two );
 }
 .navbar {
-  padding: 15px 0 0 0;
+  padding: 22px 0 35px 0;
   .nav-item {
     margin-right: 8px;
     font-size: 20px;
@@ -147,6 +75,52 @@ a:hover {
     }
   }
 }
+footer {
+  background-image: linear-gradient(to top, $blueberry, #3441D3 );
+  padding-bottom: 85px;
+  .disclaimer {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.69;
+    letter-spacing: 1.08px;
+    color: $white;
+  }
+  .terms-and-conditions {
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: 1.08px;
+    color: $light-periwinkle;
+  }
+  .copy-right {
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: 1.08px;
+    color: $white;
+  }
+  .footer-link {
+    color: $white;
+  }
+}
+.header-wave {
+  margin-top: -10px;
+  width: 100%;
+}
+.footer-wave {
+  width: 100%;
+}
+.collapsing {
+  -webkit-transition: none;
+  transition: none;
+  display: none;
+}
 .mobile-header {
   .navbar-collapse {
     position: fixed;
@@ -157,6 +131,16 @@ a:hover {
     background-color: $indigo-blue;
     text-align: right;
     z-index: 100;
+    padding-top: 22px;
+    .collapse-buttons {
+      z-index: 1;
+    }
+    .navbar-nav {
+      padding-top: 15rem;
+      right: 12px;
+      text-align: right;
+      z-index: 0;
+    }
   }
   .logo {
     text-align: left;
@@ -343,7 +327,12 @@ a:hover {
   }
 }
 
-@include media-breakpoint-up(sm) { }
+@include media-breakpoint-up(sm) {
+  .header-wave {
+    margin-top: 0px;
+    width: 100%;
+  }
+}
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) { }
@@ -352,85 +341,23 @@ a:hover {
 @include media-breakpoint-up(lg) {
 
   /* Header */
-  .waves {
-    $root: &;
-
-    position: relative;
-    height: 252px;
-    overflow: hidden;
-    background: linear-gradient(0deg, #60359C 0%, #3245D8 127.8%);
-
-    &__white,
-    &__purple {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-
-      svg {
-        width: 110vw;
-        margin-left: -50px;
-        margin-right: -50px;
+  .navbar {
+    padding: 55px 0 35px 0;
+    .nav-item {
+      margin-right: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: 0.8px;
+      button {
+        border-width: 2px;
+        font-size: 20px;
+        font-weight: 600;
       }
     }
-
-    &__white {
-      animation: wavy_flex_white 3s 1500ms ease-in-out alternate infinite;
-      width: 100%;
-      margin-bottom: -15px;
-      z-index: 2;
-
-      .more & {
-        animation: wavy_flex_white--more 2s ease-in-out alternate infinite;
-      }
-    }
-
-    &__purple {
-      animation: wavy_flex 5s ease-in-out alternate infinite;
-      margin-bottom: -2vw;
-      z-index: 1;
-
-      .more & {
-        animation: wavy_flex--more 3s 1500ms ease-in-out alternate infinite;
-      }
-    }
-  }
-  @keyframes wavy_flex {
-    from {
-      transform: slewX(50deg) slewY(5deg);
-    }
-
-    to {
-      transform: skewX(60deg) skewY(-3deg);
-    }
-  }
-  @keyframes wavy_flex--more {
-    from {
-      transform: slewX(0deg) slewY(-3deg);
-    }
-
-    to {
-      transform: skewX(50deg) skewY(5deg);
-    }
-  }
-  @keyframes wavy_flex_white {
-    from {
-      transform: slewX(0deg) slewY(0deg);
-    }
-
-    to {
-      transform: skewX(-30deg) skewY(0deg) translateY(-10px);
-    }
-  }
-  @keyframes wavy_flex_white--more {
-    from {
-      transform: slewX(-60deg) slewY(0deg) rotate(3deg);
-    }
-
-    to {
-      transform: skewX(-30deg) skewY(0deg) rotate(0deg);
-    }
-  }
-  .page-title {
+  }  .page-title {
     font-size: 55px;
     font-weight: 600;
     font-style: normal;
