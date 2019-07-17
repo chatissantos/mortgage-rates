@@ -33,7 +33,6 @@
   margin-top: 24px;
 }
 .lender-infos {
-  padding-bottom: 200px;
   background-color: $pale-lilac;
 }
 @include media-breakpoint-up(sm) { }
@@ -82,7 +81,6 @@
     margin-top: 32px;
   }
   .lender-infos {
-    padding-bottom: 200px;
     background-color: transparent;
   }
   .empty-discount__icon {
