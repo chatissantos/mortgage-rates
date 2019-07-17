@@ -303,36 +303,19 @@
                                         <div class="col-9">
                                             <div class="dropdown rates-filters__filter__dropdown">
                                                 <div class="rates-filters__filter__dropdown__button" data-toggle="dropdown">
-                                                    <span>All Terms</span>
+                                                    <span>{{ currentTerm }}</span>
                                                     <i class="fa fa-chevron-down"></i>
                                                 </div>
-
                                                 <div class="dropdown-menu" aria-labelledby="rates-filters__filter__dropdown">
-                                                    <div class="dropdown-menu__item">
-                                                        <span>Floating</span>
-                                                    </div>
-                                                    <div class="dropdown-menu__item">
-                                                        <span>6 Months</span>
-                                                    </div>
-                                                    <div class="dropdown-menu__item">
-                                                        <span>1 Year</span>
-                                                    </div>
-                                                    <div class="dropdown-menu__item">
-                                                        <span>18 Months</span>
-                                                    </div>
-                                                    <div class="dropdown-menu__item">
-                                                        <span>2 Years</span>
-                                                    </div>
-                                                    <div class="dropdown-menu__item">
-                                                        <span>3 Years</span>
-                                                    </div>
-                                                    <div class="dropdown-menu__item">
-                                                        <span>4 Years</span>
-                                                    </div>
-                                                    <div class="dropdown-menu__item">
-                                                        <span>5 Years</span>
-                                                    </div>
-
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('All Terms')">All Terms</a>
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('Floating')">Floating</a>
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('6 Months')">6 Months</a>
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('1 Year')">1 Year</a>
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('18 Months')">18 Months</a>
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('2 Years')">2 Years</a>
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('3 Years')">3 Years</a>
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('4 Years')">4 Years</a>
+                                                    <a class="dropdown-item" v-on:click="filterByTerm('5 Years')">5 Years</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -396,32 +379,32 @@
                     </div>
                 </div>
                 <div class="rates-table__rows">
-                    <div class="rates-table__rows__row" v-for="rate in filteredRates">
+                    <div class="rates-table__rows__row" v-for="rate in filteredRates" v-bind:class="{'rates-table__rows__row--disabled': !rate.isVisible}">
                         <div class="rates-table__rows__row__left-header">
                             <span><a href="lender.html" title="Lender page"> {{ rate.lender }}</a></span>
                         </div>
-                        <div class="rates-table__rows__row__cell">
+                        <div class="rates-table__rows__row__cell" v-bind:class="{'text--disabled': currentTerm !== 'All Terms' && currentTerm != 'Floating'}">
                             <span>{{ rate.terms._floating }}</span>
                         </div>
-                        <div class="rates-table__rows__row__cell">
+                        <div class="rates-table__rows__row__cell" v-bind:class="{'text--disabled': currentTerm !== 'All Terms' && currentTerm != '6 Months'}">
                             <span>{{ rate.terms._6m }}</span>
                         </div>
-                        <div class="rates-table__rows__row__cell">
+                        <div class="rates-table__rows__row__cell" v-bind:class="{'text--disabled': currentTerm !== 'All Terms' && currentTerm != '1 Year'}">
                             <span>{{ rate.terms._1y }}</span>
                         </div>
-                        <div class="rates-table__rows__row__cell">
+                        <div class="rates-table__rows__row__cell" v-bind:class="{'text--disabled': currentTerm !== 'All Terms' && currentTerm != '18 Months'}">
                             <span>{{ rate.terms._18m }}</span>
                         </div>
-                        <div class="rates-table__rows__row__cell">
+                        <div class="rates-table__rows__row__cell" v-bind:class="{'text--disabled': currentTerm !== 'All Terms' && currentTerm != '2 Years'}">
                             <span>{{ rate.terms._2y }}</span>
                         </div>
-                        <div class="rates-table__rows__row__cell">
+                        <div class="rates-table__rows__row__cell" v-bind:class="{'text--disabled': currentTerm !== 'All Terms' && currentTerm != '3 Years'}">
                             <span>{{ rate.terms._3y }}</span>
                         </div>
-                        <div class="rates-table__rows__row__cell">
+                        <div class="rates-table__rows__row__cell" v-bind:class="{'text--disabled': currentTerm !== 'All Terms' && currentTerm != '4 years'}">
                             <span>{{ rate.terms._4y }}</span>
                         </div>
-                        <div class="rates-table__rows__row__cell">
+                        <div class="rates-table__rows__row__cell" v-bind:class="{'text--disabled': currentTerm !== 'All Terms' && currentTerm != '5 Years'}">
                             <span>{{ rate.terms._5y }}</span>
                         </div>
                     </div>
@@ -664,6 +647,7 @@
                 isTop5Bank: true,
                 isKiwiOwned: true,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 3.95,
@@ -681,6 +665,7 @@
                 isKiwiOwned: false,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.235,
@@ -698,6 +683,7 @@
                 isKiwiOwned: false,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -715,6 +701,7 @@
                 isKiwiOwned: true,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -732,6 +719,7 @@
                 isKiwiOwned: false,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -749,6 +737,7 @@
                 isKiwiOwned: false,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -766,6 +755,7 @@
                 isKiwiOwned: true,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -783,6 +773,7 @@
                 isKiwiOwned: false,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -800,6 +791,7 @@
                 isKiwiOwned: false,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -817,6 +809,7 @@
                 isKiwiOwned: false,
                 isNonBank: false,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -834,6 +827,7 @@
                 isKiwiOwned: false,
                 isNonBank: true,
                 isLowDeposit: false,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -851,6 +845,7 @@
                 isKiwiOwned: false,
                 isNonBank: false,
                 isLowDeposit: true,
+                isVisible: true,
                 terms: {
                     _floating: 4.05,
                     _6m: 4.05,
@@ -866,15 +861,15 @@
         var ratesTable = new Vue({
             el: '#ratesTable',
             data: {
-                currentTerm: 'all',
+                currentTerm: 'All Terms',
                 currentLenderFilter: 'All Lenders',
                 currentSort: 'Lenders A-Z',
                 filteredRates: rates.slice()
             },
             methods: {
                 filterByLender: function(value) {
-                    this.filteredRates = rates.filter(function (rate) {
-                        return value === 'all' ? true : rate[value];
+                    this.filteredRates = rates.map(function (rate) {
+                        return {...rate, isVisible: value === 'all' ? true : rate[value]};
                     });
                     switch (value) {
                         case 'isNonBank':

@@ -80,6 +80,12 @@ $table-column-width: 64px;
   margin-bottom: 8px;
   border-radius: 4px;
 }
+.rates-table__rows__row--disabled {
+  color: $pale-lilac!important;
+}
+.text--disabled {
+  color: $pale-lilac!important;
+}
 .rates-table__rows__row--mobile {
   -webkit-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
   -moz-box-shadow: -2px 2px 2px -1px rgba(0,0,0,0.26);
